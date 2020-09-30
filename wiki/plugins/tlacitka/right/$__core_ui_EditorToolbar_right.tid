@@ -1,0 +1,14 @@
+caption: {{$:/language/Buttons/right/Caption}}
+condition: [<targetTiddler>!has[type]] [<targetTiddler>type[text/vnd.tiddlywiki]]
+description: {{$:/language/Buttons/right/Hint}}
+icon: $:/core/images/align-right
+shortcuts: ((right))
+tags: $:/tags/EditorToolbar
+title: $:/core/ui/EditorToolbar/right
+
+<$action-sendmessage
+	$message="tm-edit-text-operation"
+	$param="wrap-selection"
+	prefix='<div style="text-align:right;">'
+	suffix='</div>'
+/>

@@ -1,0 +1,14 @@
+caption: {{$:/language/Buttons/center/Caption}}
+condition: [<targetTiddler>!has[type]] [<targetTiddler>type[text/vnd.tiddlywiki]]
+description: {{$:/language/Buttons/center/Hint}}
+icon: $:/core/images/align-center
+shortcuts: ((center))
+tags: $:/tags/EditorToolbar
+title: $:/core/ui/EditorToolbar/center
+
+<$action-sendmessage
+	$message="tm-edit-text-operation"
+	$param="wrap-selection"
+	prefix='<div style="text-align:center;">'
+	suffix='</div>'
+/>

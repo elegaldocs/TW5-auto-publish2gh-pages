@@ -1,0 +1,14 @@
+caption: {{$:/language/Buttons/tab/Caption}}
+condition: [<targetTiddler>!has[type]] [<targetTiddler>type[text/vnd.tiddlywiki]]
+description: {{$:/language/Buttons/tab/Hint}}
+icon: $:/core/images/format-indent
+shortcuts: ((tab))
+tags: $:/tags/EditorToolbar
+title: $:/core/ui/EditorToolbar/tab
+
+<$action-sendmessage
+	$message="tm-edit-text-operation"
+	$param="wrap-selection"
+	prefix='<p style="text-indent :5em;" >'
+	suffix='</p>'
+/>

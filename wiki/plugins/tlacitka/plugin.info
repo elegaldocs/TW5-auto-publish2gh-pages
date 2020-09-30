@@ -1,0 +1,18 @@
+{
+  "author": "jardo",
+  "author-name": "jp",
+  "author-email": "prokesj@gmail.com",
+  "author-web": "https://elegaldocs.sk",
+  "source": "",
+  "userguide": "",
+  "dependents": "",
+  "description": "pridavanie komentarov",
+  "name": "$:/plugins/jardo/tlacitka",
+  "plugin-type": "plugin",
+  "tags": "",
+  "title": "$:/plugins/jardo/tlacitka",
+  "type": "application/json",
+  "version": "1.0.0",
+  "core-version": "1.0.0",
+  "list": "readme license"
+}

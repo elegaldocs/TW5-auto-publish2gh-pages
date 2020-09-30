@@ -1,0 +1,14 @@
+caption: {{$:/language/Buttons/comment/Caption}}
+condition: [<targetTiddler>!has[type]] [<targetTiddler>type[text/vnd.tiddlywiki]]
+description: {{$:/language/Buttons/comment/Hint}}
+icon: $:/core/images/add-comment
+shortcuts: ((comment))
+tags: $:/tags/EditorToolbar
+title: $:/core/ui/EditorToolbar/comment
+
+<$action-sendmessage
+	$message="tm-edit-text-operation"
+	$param="wrap-selection"
+	prefix="<!-- "
+	suffix=" -->"
+/>

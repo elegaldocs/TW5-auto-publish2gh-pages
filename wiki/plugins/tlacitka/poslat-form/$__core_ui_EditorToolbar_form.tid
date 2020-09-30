@@ -1,0 +1,17 @@
+caption: {{$:/language/Buttons/form/Caption}}
+condition: [<targetTiddler>!has[type]] [<targetTiddler>type[text/vnd.tiddlywiki]]
+description: {{$:/language/Buttons/form/Hint}}
+icon: $:/core/images/form
+shortcuts: ((form))
+tags: $:/tags/EditorToolbar
+title: $:/core/ui/EditorToolbar/form
+
+\define content() {{$:/state/StampTiddler/form}}
+<$wikify name="wikifyForm" text=<<content>> output='html'>
+<$action-sendmessage
+	$message="tm-edit-text-operation"
+	$param="wrap-selection"
+	prefix=<<wikifyForm>>
+	suffix=""
+/>
+</$wikify>
