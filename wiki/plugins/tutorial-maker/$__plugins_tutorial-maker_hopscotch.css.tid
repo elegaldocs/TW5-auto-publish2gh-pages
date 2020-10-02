@@ -1,0 +1,6 @@
+created: 20180902124832216
+modified: 20180902124941258
+tags: $:/tags/RawMarkup
+title: $:/plugins/tutorial-maker/hopscotch.css
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hopscotch/0.3.1/css/hopscotch.min.css" />

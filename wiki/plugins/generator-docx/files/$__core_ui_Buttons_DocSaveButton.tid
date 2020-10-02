@@ -1,0 +1,24 @@
+created: 20180526085014425
+modified: 20180601204833663
+revision: 1-e8e399324b30b30280dcf21cfa895aa5
+tags: DocSaveButtons ss $:/tags/ViewToolbar
+title: $:/core/ui/Buttons/DocSaveButton
+type: text/vnd.tiddlywiki
+
+\define my-actions()
+<$wikify name="var" text={{!!text}} output="html">
+<$macrocall $name="docxmacro" obsah=<<var>> nazov={{!!title}}/>
+\end
+\define newHereButtonTags()
+[[$(currentTiddler)$]]
+\end
+\define newHereButton()
+<$button actions=<<my-actions>> tooltip="Save in docx" class=<<tv-config-toolbar-class>>>
+<$action-sendmessage
+$param="TITLE OF YOUR SKELETON BUTTON" />
+<$list filter="[<tv-config-toolbar-icons>prefix[yes]]">
+{{$:/core/images/save-button}}
+</$list>
+</$button>
+\end
+<<newHereButton>>

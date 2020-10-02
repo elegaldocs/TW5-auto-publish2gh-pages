@@ -1,0 +1,14 @@
+created: 20181119182848505
+creator: Mohammad
+modified: 20191013153056501
+tags: $:/tags/Stylesheet
+title: $:/plugins/kookma/shiraz/stylesheet/image-basic
+type: text/css
+
+.image-simple {
+  text-align: center;
+  font-style: italic;
+  font-size: smaller;
+  text-indent: 0;
+  padding: 0.5em;
+}

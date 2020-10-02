@@ -1,0 +1,30 @@
+created: 20191112174053015
+creator: 60fa9f73-1464-4ced-ad9d-bf6feceeb815-bluemix
+modified: 20191114213740574
+modifier: 60fa9f73-1464-4ced-ad9d-bf6feceeb815-bluemix
+revision: 0
+tags: DocSaveButtons
+title: Generátor xml
+tmap.id: 021c58a7-7023-41c6-8601-8487ab89172b
+type: text/vnd.tiddlywiki
+
+\define akcia()
+<$list filter={{$:/temp/docx!!filter}}>
+<$wikify name="var" text={{!!text}} output="text">
+<$macrocall $name="tidmacro" obsah=<<var>> nazov={{!!title}} format='xml'/>
+</$list>
+\end
+<$edit-text class='tc-edit-texteditor' tiddler="$:/temp/docx" field='filter'/>
+
+! Vybrané tiddlery:
+
+<$list filter={{$:/temp/docx!!filter}}>
+
+ Dokument:  <$link to=<<currentTiddler>> >
+
+
+</$link>
+</$list>
+
+<$button actions=<<akcia>> tooltip="Save in tid">vygenerujte dokumenty </$button>
+

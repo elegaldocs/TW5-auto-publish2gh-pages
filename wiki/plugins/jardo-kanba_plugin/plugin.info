@@ -1,0 +1,18 @@
+{
+  "author": "jardo",
+  "author-name": "jp",
+  "author-email": "prokesj@gmail.com",
+  "author-web": "https://elegaldocs.sk",
+  "source": "",
+  "userguide": "",
+  "dependents": "$:/plugins/kixam/moment $:/plugins/kixam/datepicker $:/plugins/OokTech/Calendar",
+  "description": "jednoduche kanban macro",
+  "name": "$:/plugins/jardo/kanba_plugin",
+  "plugin-type": "plugin",
+  "tags": "",
+  "title": "$:/plugins/jardo/kanba_plugin",
+  "type": "application/json",
+  "version": "1.0.0",
+  "core-version": "1.0.0",
+  "list": "readme license"
+}

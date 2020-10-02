@@ -1,0 +1,26 @@
+created: 20180529105857455
+creator: 60fa9f73-1464-4ced-ad9d-bf6feceeb815-bluemix
+modified: 20191114213740574
+modifier: 60fa9f73-1464-4ced-ad9d-bf6feceeb815-bluemix
+revision: 2-fac71e2e8dad3255d815ba2391c49cb8
+tags: DocSaveButtons $:/tags/ViewToolbar
+title: $:/core/ui/Buttons/PdfSaveButton
+type: text/vnd.tiddlywiki
+
+\define my-actions()
+<$wikify name="var" text={{!!text}} output="text">
+<$macrocall $name="tidmacro" obsah=<<var>> nazov={{!!title}} format='xml'/>
+\end
+\define newHereButtonTags()
+[[$(currentTiddler)$]]
+\end
+\define newHereButton()
+<$button actions=<<my-actions>> tooltip="Save in xml" class=<<tv-config-toolbar-class>>>
+<$action-sendmessage
+$param="pdf generator" />
+<$list filter="[<tv-config-toolbar-icons>prefix[yes]]">
+{{$:/core/images/save-button}}
+</$list>
+</$button>
+\end
+<<newHereButton>>

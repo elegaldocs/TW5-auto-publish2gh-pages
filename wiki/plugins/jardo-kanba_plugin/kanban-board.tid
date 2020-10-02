@@ -1,0 +1,28 @@
+color: yellow
+created: 20200308144518918
+modified: 20200320115925910
+tags: kanban-manager task done
+title: kanban-board
+
+\define table-macro(headers)
+<table style="width:100%">
+<$list filter="inbox todo doing done" variable='x'><th><<x>></th></$list>
+<tr>
+<td>
+<<list-tagged-draggable pole:"color='blue'  tags='inbox task'" tag:"inbox" subFilter:"tag[task]" itemTemplate:"TaskManagementExampleDraggableTemplate" emptyMessage:"You don't have any active tasks">>
+</td>
+<td>
+<<list-tagged-draggable pole:"color='white' tags='todo task'" tag:"todo" subFilter:"tag[task]" itemTemplate:"TaskManagementExampleDraggableTemplate" emptyMessage:"You don't have any active tasks">>
+</td>
+<td>
+<<list-tagged-draggable pole:"color='green' tags='doing task'" tag:"doing" subFilter:"tag[task]" itemTemplate:"TaskManagementExampleDraggableTemplate" emptyMessage:"You don't have any active tasks">>
+</td>
+<td>
+<<list-tagged-draggable pole:"color='yellow' tags='done task'" tag:"done" subFilter:"tag[task]" itemTemplate:"TaskManagementExampleDraggableTemplate" emptyMessage:"You don't have any active tasks">>
+</td>
+</tr>
+</table>
+\end
+
+<<table-macro headers:'tabulka'>>
+

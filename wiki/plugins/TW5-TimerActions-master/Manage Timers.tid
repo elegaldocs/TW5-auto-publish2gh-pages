@@ -1,0 +1,51 @@
+title: $:/plugins/OokTech/TimerActions/Manage Timers
+caption: Manage Timers
+
+Select Timer:
+<$select
+  tiddler='$:/state/plugins/OokTech/TimerActions/NewTimer'
+  field='selected_timer'
+>
+  <option
+    value=''
+  >
+    --
+  </option>
+  <option>
+    Show All
+  </option>
+  <$list
+    filter='[[$:/plugins/OokTech/TimerActions/TaskList]indexes[]search:title{$:/state/plugins/OokTech/TimerActions/NewTimer!!search}]'
+  >
+    <option
+      value=<<currentTiddler>>
+    >
+      <$view
+        field='title'
+      />
+    </option>
+  </$list>
+</$select>
+<$edit-text
+  tiddler='$:/state/plugins/OokTech/TimerActions/NewTimer'
+  field='search'
+  placeholder='Search'
+/>
+
+<$list
+  filter='[{$:/state/plugins/OokTech/TimerActions/NewTimer!!selected_timer}!prefix[Show All]]'
+  variable=null
+  emptyMessage="""
+  <$list
+    filter='[[$:/plugins/OokTech/TimerActions/TaskList]indexes[]search:title{$:/state/plugins/OokTech/TimerActions/NewTimer!!search}]'
+    template='$:/plugins/OokTech/TimerActions/ManageTimerTemplate'
+    emptyMessage="There are no timers defied. Create one using the [[New Timer Tool|$:/plugins/OokTech/TimerActions/New Timer]]"
+  />
+  """
+>
+  <$list
+    filter='[{$:/state/plugins/OokTech/TimerActions/NewTimer!!selected_timer}has[title]]'
+    template='$:/plugins/OokTech/TimerActions/ManageTimerTemplate'
+    emptyMessage="Select a timer to modify or create one using the [[New Timer Tool|$:/plugins/OokTech/TimerActions/New Timer]]"
+  />
+</$list>

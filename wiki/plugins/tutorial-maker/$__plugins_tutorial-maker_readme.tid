@@ -1,0 +1,31 @@
+created: 20180902153847242
+modified: 20180902170645667
+tags: 
+title: $:/plugins/tutorial-maker/readme
+
+This plugins enables the creation of interactive tutorials in ~TiddlyWiki using ~HopScotchjs. 
+
+__Widget Attributes__
+
+|!Attribute|!Description|
+|''Tiddler''|Name of tiddler containing JSON tutorial|
+|''Trigger''|The widget message that will trigger this tutorial. Defaults to //start-tutorial//|
+
+__Basic Usage__
+
+The widget accepts a 
+
+# tiddler that contains a JSON object that instructs ~HopScotchjs, a framework product tours, how to step through a tutorial. The documentation for ~HopScotch's API can be found [[here|http://linkedin.github.io/hopscotch/]].
+# A trigger message that the widget should listen out for to start the defined tutorial. This is usually sent by a button widget.
+
+Triggering the tutorial requires a simple `start-tutorial` or any other defined, custom widget message.
+
+__Example__
+
+```
+<$button message="start-this-tutorial">
+Start Tutorial
+</$button>
+
+<$tutorial tiddler="Example" message="start-this-tutorial" />
+```

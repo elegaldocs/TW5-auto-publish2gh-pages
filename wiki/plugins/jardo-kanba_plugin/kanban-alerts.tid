@@ -1,0 +1,30 @@
+created: 20200322181207791
+modified: 20200322184946398
+tags: 
+title: kanban-alerts
+tmap.id: d972b628-1868-4755-8252-56fde0e547e4
+type: text/vnd.tiddlywiki
+
+\define datum() value=<<now YYYY-MM-DD>>>
+\define obsah()
+<$list filter="[tag[task]!has[draft.of]due_date<datum>]">
+<p><$link to=<<currentTiddler>> ><<currentTiddler>>
+</$link>
+<$button>
+<$action-deletetiddler $tiddler=<<currentTiddler>>/>
+{{$:/core/images/delete-button}}
+</$button></p>
+</$list>
+\end
+
+<$if value={{{[tag[task]!has[draft.of]due_date<now YYYY-MM-DD>]}}}>
+<$if not value={{{[prefix[Today’s Tasks]]}}}>
+<$action-createtiddler $basetitle="Today’s Tasks" tags="$:/tags/Alert" text=<<obsah>> component="Today’s Tasks:"/>
+  </$if>
+</$if>
+<$else>
+<$if not value={{{[tag[task]!has[draft.of]due_date<now YYYY-MM-DD>]}}}>
+<$if value={{{[prefix[Today’s Tasks]]}}}>
+<$action-deletetiddler $filter="[prefix[Today’s Tasks]]">
+</$if>
+</$else>

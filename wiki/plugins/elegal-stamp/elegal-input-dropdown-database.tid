@@ -1,0 +1,533 @@
+created: 20200321104856221
+modified: 20200321154711787
+tags: input autotextDictionary autotextDictionary
+title: elegal-input-dropdown-database
+tmap.id: 120ed941-9d63-40bc-bbd3-a51355eccc55
+type: application/x-tiddler-dictionary
+
+typ identifikačného dokladu:IdCardType
+xx:
+gombík:`<$button set="TiddlerA!!caption" setTo={{TiddlerB!!caption}} >Press me!</$button>`
+právne zastúpenie:LegalRepresentation
+spôsob úhrady súdneho poplatku:PaymentMethodCourtFees
+výška výživného slovom:AlimonyPriceByWord
+výška výživného:AlimonyPrice
+výška výživného v eurách:AlimonyCashAmount
+zročnosť výživného:AlimonyMaturity
+trovy konania:Costs
+rodič:Parent
+právne argumenty:LegalArguments
+skutkové okolnosti veci:Facts
+členský vklad:MembershipContribution
+akcie:Shares
+obmedzenie prevoditeľnosti:TransferRestrictions
+menovitá hodnota:NominalValue
+podoba akcií:VersionOfShares
+forma akcií:FormOfShares
+druh akcií:TypesOfShares
+počet akcií:NumberOfShares
+organizačná zložka:Branch
+identifikačné číslo registrového súdu:CourtIdNumber
+rozsah splatenie vkladu:CapitalContributionsRedemption 
+kraj:County
+okres:District
+manželstvo:Matrimony
+vybavuje:Handle
+spisová značka:FileNumber
+názov právnickej osoby:Name
+osoba:Person
+príloha:addition
+dátum uzatvorenia manželstva:MatrimonyDate
+miesto vzniku manželstva:MatrimonyPlace
+fakt - obsah skutkového záveru:Fact
+fakt druh - skutkový záver:FactType
+miesto podnikania pcč:BusinessLocationZIP
+miesto podnikania obec:BusinessLocationMunicipality
+miesto podnikania ulica číslo:BusinessLocationPersonStreet
+miesto podnikania ulica:BusinessLocationStreet
+dátum vzniku funkcie:EffectiveDate
+spôsob konania:CourseOfAction
+doba uplynutia:ExpiredPeriod
+súdny poplatok výška slovom:CourtChargeAmountByWord
+súdny poplatok výška:CourtChargeAmount
+súdny poplatok:CourtCharge
+povinnosť odporcu:RespondentDuty
+dátum podania na súd:PleadingDate
+číslo konania:FileReferenceNumber
+daňový preplatok výška:TaxExcessAmount
+zdaňovacie obdobie rok:TaxYear
+príjem zo zahraničia:AbroadIncome
+nedostatky popis:ShortcomingsDescription
+nedostatky:Shortcomings
+dátum inventarizácie:InventoryDate
+Inventúrny dokument:InventoryDocument
+Dátum začiatku hmotnej zodpovednosti:MaterialResponsibilityStartDate
+bankový účet:AccountNumber
+Dôvod žiadostiDôvod
+zdaňovacie obdobie:TaxYear
+dátum daňového priznania:TaxDeclarationDate
+náhrada:Compensation
+fakulta:Faculty
+špecializácia:StudyField
+dôkaz:Evidence
+skúšobný input:SkusobnyInput
+dátum viazanosti:ObligationDate
+koniec deň:EndDate
+začiatok deň:StartDate
+škola názov:SchoolName
+škola druh:SchoolType
+štúdium trvanie:StudiumDuration
+štúdium forma:StudiumForm
+štúdium popis:StudiumDescription
+dátum školenia:TrainingDate
+vlastník:Owner
+záručná doba:WarrantyPeriod
+účel:Purpose
+suma hotovosti slovom:CashAmountByWord
+suma hotovosti:CashAmount
+počet rovnopisov dokumentu:NumbersOfCopies
+titul pred menom:Title
+postavenie:Position
+krstné meno:Surname
+priezvisko:Lastname
+rodné priezvisko:NameAtBirth
+titul za menom:NameSuffix
+dátum narodenia:BirthDate
+miesto narodenia:BirthPlace
+dátum smrti:DeathDate
+miesto smrti:DeathPlace
+rodné číslo:PersonalIdentificationNumber
+číslo občianskeho preukazu:IdCardNumber
+druh bydliska:AddressType
+ulica:Street
+ulica číslo:StreetNumber
+obec:Municipality
+psč:ZIP
+štát:State
+občianstvo - štátna príslušnosť:Citizenship
+fax:Fax
+mobil:Mobil
+email:Email
+pohlavie:Sex
+rodinný stav:MaritalStatus
+web:Web
+právna forma:LegalForm
+právnická osoba dátum vzniku:EstablishmentDate
+právnická osoba dátum založenia:FoundationDate
+právnická osoba dátum zrušenia:Dissolve
+právnická osoba dátum zániku:TerminationDate
+ičo:CompRegNo
+dičo:TaxIdentificationNumber
+dph ičo:IVAT
+sídlo:HeadOffice
+obchodný register  registrový súd:RegistryCourt
+obchodný register vložka:RegistryCourtSection
+obchodný register oddiel:RegistryCourtInsertNo
+štatutár:StatutoryBody
+prokurista:Procuration
+zástupca:Representative
+súd názov:CourtLegalName
+súd adresa:CourtAddress
+dátum podpisu dokumentu:SignatureDate
+číslo dokumentu - zmluvy:DocumentNo
+miesto podpisu dokumentu:SignaturePlace
+zmluvná pokuta:LatePaymentFine
+penále - pokuta:Fine
+úrok:Interest
+úrok z omeškania:InterestArrears
+dátum zročnosti:Maturity
+spôsob platby:PaymentMethod
+miesto platby:PaymentPlace
+zálah - preddavok:Deposit
+cena:Price
+banka štatutár:BankStatutoryBody
+banka sídlo:BankHeadOffice
+banka názov:BankName
+banka:Bank
+nehnuteľnosť číslo listu vlastníctva:PlotOwnershipDocNo
+nehnuteľnosť druh:PlotType
+nehnuteľnosť veľkosť:PlotSize
+nehnuteľnosť číslo parcely:PlotParcelNumber
+nehnuteľnosť typ parcely:PlotParcelType
+nehnuteľnosť kataster okres:PlotDistrict
+nehnuteľnosť kataster kraj:PlotMunicipality
+nehnuteľnosť katastrálne územie:PlotCadasterZone
+nehnuteľnosť kataster:PlotCadaster
+byt číslo:AppartmentNumber
+byt spoluvlastnícky podiel:AppartmentAccessoryCoOwnership
+byt popisné číslo:AppartmentOrientationNumber
+byt súpisné číslo:AppartmentRegisterNumber
+byt izba druh:AppartmentRoomType
+byt poschodie bytového domu:AppartmentResidentialBuildingFloor
+byt správa bytového domu:BuildingAdministration
+byt izby počet:AppartmentRoomsNumber
+byt výmera príslušenstvo:AppartmentAccessoryArea
+byt výmera podlahová:AppartmentFloorArea
+byt výmera celková:AppartmentArea
+byt poschodie:AppartmentFloor
+automobil príslušenstvo:CarAccessories
+automobil počet najazdených km:CarKm
+automobil rok výroby:CarManufactureYear
+automobil číslo motora:EngineNumber
+automobil špz:CarPlate
+automobil vin číslo:Vin
+automobil farba:CarColour
+automobil značka:CarFactory
+automobil typ:CarType
+stavba druh:BuildingType
+stavba súpisné číslo:BuildingRegistryNumber
+pracovná pozícia:EmployeePosition
+miesto výkonu práce:EmployeeLocation
+pracovná náplň:WorkActivity
+pracovný pomer začiatok:EmploymentStartDate
+pracovný pomer koniec:EmploymentTerminationDate
+dátum zmeny pracovnej zmluvy:EmploymentContractChangeDate
+zmena bodu v pracovnej zmluve:EmploymentContractChangePart 
+zmena bodu v pracovnej zmluve slovom:EmploymentContractChangePartByWord 
+zmena pracovnej zmluvy:EmploymentContractChange
+zmena pracovnej zmluvy slovom:EmploymentContractChangeByWord
+pracovný pomer trvanie:EmploymentDuration
+spôsob ukončenia pracovného pomeru:EmploymentTerminationType
+osobný dotazník:EmploymentQuestionnaire
+životopis:EmploymentCV
+dodatočné dokumenty:EmploymentAdditionalDocuments
+dátum podpisu pracovnej zmluvy:EmploymentContractSignatureDate
+týždenný pracovný čas:WeeklyWorkingHours
+denný pracovný čas:DailyWorkingHours
+skúšobná doba:ProbationaryPeriod
+základná zložka mzdy:GrossWage
+pohyblivá zložka mzdy:MotivationWage
+čistá mzda:NetWage
+minimálna mzda:MinimumWage
+dátum výplaty:SalaryDate
+dohoda o ukončení pracovného pomeru:QuittingAgreement
+výpovedná doba začiatok:CancellationPeriodStartDate
+výpovedná doba koniec:CancellationPeriodTerminationDate
+dátum doručenia:DeliveryDate
+výpovedná lehota:NoticePeriode
+začiatok prac.doby starý:WorkingTimeStartHourOld
+začiatok prac.doby nový:WorkingTimeStartHourNew
+dátum začiatku materskej dovolenky:MaternityLeaveStartDate
+dátum ukončenia materskej dovolenky:MaternityLeaveEndDate
+nárok na kalendárny rok:AnnualHolidayYear
+začiatok čerpania dovolenky:HolidayStartDate
+koniec čerpania dovolenky:HolidayEndDate
+miesto čerpania dovolenky:HolidayLocation
+počet pracovný dní počas dovolenky:HolidayWorkDaysDuration
+dátum odvracania nehody:HelpByAccidentDate
+popis nehody:AccidentDescription
+predmet škody:DamagedObject
+hodnota predmetu škody:DamagedObjectValue
+celková výška škody:DamagedObjectValueTotal
+doklad o nákupe:PurchaseProof
+dátum krádeže na pracovisku:WorkplaceRobberyDate
+ukradnutý predmet:StolenObject
+hodnota ukradnutého predmetu:StolenObjectValue
+celková výška krádeže:StolenObjectValueTotal
+dôvody žiadosti o inventúru:InventoryRequestReason
+koeficient násobku:MultiplyingFactor
+priemerná mzda:SalaryAverage
+mesiac výplaty:SalaryMonth
+rok výplaty:SalaryYear
+peňažné plnenie vyplatené omylom:SalaryMistakeAmount
+dôvody žiadosti:RequestReason
+dátum začiatku pracovnej cesty:BusinessJourneyStartDate
+dátum skončenia pracovnej cesty:BusinessJourneyEndDate
+miesto pracovnej cesty:BusinessJourneyLocation
+dátum začatia podnikania zamestnanca:OwnBusinessStartDate
+predmet činnosti podnikania zamestnanca:OwnBusinessActivity
+predmet podnikania:BusinessType
+základné imanie:CapitalEur
+základné imanie slovom:CapitalByWord
+peňažný vklad:PaidInCapital
+nepeňažný vklad:NonCashAssets
+vklad spoločníka:CapitalContributions
+vklad spoločníka slovom:CapitalContributionsByWord
+meno vkladateľa:ContributorName
+druh vkladu:ContributionType
+spôsob vloženia splatenia vkladu:ContributionPaymentMethod
+identifikácia vkladu:ContributionSpecification
+obchodné vedenie:BusinessManagement
+obchodné vedenie meno:BusinessManager
+obchodné vedenie predmet:BusinessManagementSubject
+zisk:Profit
+vyrovnací podiel:SettlementShare
+vyrovnací podiel splatnosť:SettlementShareMaturity
+správca vkladu:CapitalAdministrator
+zisk slovom:ProfitByWord
+strata:Loss
+strata slovne:LossByWord
+dátum zápisu:RegistrationDate
+predmet podnikania kód:BusinessTypeCode
+travanie:Duration
+národnosť:Nationality
+porušenie pracovnej disciplíny:Misconduct
+Dátum porušenia pracovnej disciplíny:MisconductDate
+výška podieľu v spoločnosti:Share
+iný dôvod žiadosti na inventúru:OtherInventoryRequestReason
+zverený predmet popis:EntrustedSubjectDescription
+dátum zverenia predmetu:SubjectEntrustingDate
+Deadline dátum:DeadlineDate
+cena slovom:PriceByWord
+adresa:Address
+počet príloh:NumberOfAttachments
+počet listov:NumberOfSheets
+číslo prílohy:AttachmentSerialNumber1
+názov prílohy:AttachmentName
+koment:`<!--  -->`
+akcie:Shares
+názov registrového súdu hodnota:CourtLegalNameValue
+spôsob konania štatutárneho zástupcu sro:SroStatutoryBodyCourseOfAction
+prílohy návrhu na zápis do obchodného registra:CommercialRegisterAdditions
+spôsob konania prokuristu:ProcurationCourseOfAction
+obchodný register:CommercialRegister
+kraj:County
+okres:District
+živnosť poznámka:BusinessTypeNote
+živnosť preukaz spôsobilosti:BusinesLicence
+živnosť:BusinessType
+skupina živností:BusinessGroup
+výmera pozemku:LotSize
+druh pozemku:LotType
+označenie registra v katastri:RegistreSign
+pozemok:Lot
+názov budovy:BuildingName
+iná budova:OtherBuilding
+manželstvo:Matrimony
+titul predm menom:NaturalPersonTitle
+vybavuje:Handle
+spisová značka:FileNumber
+názov právnickej osoby:LegalPersonName
+osoba:Person
+príloha:Addition
+dátum uzatvorenia manželstva:MatrimonyDate
+miesto vzniku manželstva:MatrimonyPlace
+fakt - obsah skutkového záveru:Fact
+fakt druh - skutkový záver:FactType
+miesto podnikania pcč:BusinessLocationZIP
+miesto podnikania obec:BusinessLocationMunicipality
+miesto podnikania ulica číslo:BusinessLocationPersonStreet
+miesto podnikania ulica:BusinessLocationStreet
+dátum vzniku funkcie:EffectiveDate
+spôsob konania:CourseOfAction
+doba uplynutia:ExpiredPeriod
+súdny poplatok výška slovom:CourtChargeAmountByWord
+súdny poplatok výška:CourtChargeAmount
+súdny poplatok:CourtCharge
+povinnosť odporcu:RespondentDuty
+dátum podania na súd:PleadingDate
+číslo konania:FileReferenceNumber
+daňový preplatok výška:TaxExcessAmount
+zdaňovacie obdobie rok:TaxYear
+príjem zo zahraničia:AbroadIncome
+nedostatky popis:ShortcomingsDescription
+nedostatky:Shortcomings
+dátum inventarizácie:InventoryDate
+Inventúrny dokument:InventoryDocument
+Dátum začiatku hmotnej zodpovednosti:MaterialResponsibilityStartDate
+zdaňovacie obdobie:TaxYear
+dátum daňového priznania:TaxDeclarationDate
+náhrada:Compensation
+fakulta:Faculty
+špecializácia:StudyField
+dôkaz:Evidence
+skúšobný input:SkusobnyInput
+dátum viazanosti:ObligationDate
+konečený dátum:EndDate
+začiatok deň:StartDate
+škola názov:SchoolName
+škola druh:SchoolType
+štúdium trvanie:StudiumDuration
+štúdium forma:StudiumForm
+štúdium popis:StudiumDescription
+dátum školenia:TrainingDate
+vlastník:Owner
+záručná doba:WarrantyPeriod
+účel:Purpose
+suma hotovosti slovom:CashAmountByWord
+suma hotovosti:CashAmount
+počet rovnopisov dokumentu:NumbersOfCopies
+meno názov:Name
+postavenie:Position
+krstné meno:Surname
+priezvisko:Lastname
+rodné priezvisko:NameAtBirth
+titul za menom:NameSuffix
+dátum narodenia:BirthDate
+miesto narodenia:BirthPlace
+dátum smrti:DeathDate
+miesto smrti:DeathPlace
+rodné číslo:PersonalIdentificationNumber
+číslo občianskeho preukazu:IdCardNumber
+druh bydliska:AddressType
+ulica:Street
+ulica číslo - súpisné číslo:StreetNumber
+obec:Municipality
+psč:ZIP
+štát:State
+občianstvo - štátna príslušnosť:Citizenship
+fax:Fax
+mobil:Mobil
+email:Email
+pohlavie:Sex
+rodinný stav:MaritalStatus
+bankový účet číslo:AccountNumber
+web:Web
+právna forma:LegalForm
+právnická osoba dátum vzniku:EstablishmentDate
+právnická osoba dátum založenia:FoundationDate
+právnická osoba dátum zrušenia:Dissolve
+právnická osoba dátum zániku:TerminationDate
+ičo:CompRegNo
+dičo:TaxIdentificationNumber
+dph ičo:IVAT
+sídlo:HeadOffice
+obchodný register  registrový súd:RegistryCourt
+obchodný register vložka:RegistryCourtSection
+obchodný register oddiel:RegistryCourtInsertNo
+štatutár - celé meno:StatutoryBody
+prokurista - celé meno:Procuration
+zástupca - celé menom:Representative
+súd názov:CourtLegalName
+súd adresa:CourtAddress
+dátum podpisu dokumentu:SignatureDate
+číslo dokumentu - zmluvy:DocumentNo
+miesto podpisu dokumentu:SignaturePlace
+zmluvná pokuta:LatePaymentFine
+penále - pokuta:Fine
+úrok:Interest
+úrok z omeškania:InterestArrears
+dátum zročnosti:Maturity
+spôsob platby:PaymentMethod
+miesto platby:PaymentPlace
+zálah - preddavok:Deposit
+cena:Price
+banka štatutár:BankStatutoryBody
+banka sídlo:BankHeadOffice
+banka názov:BankName
+banka:Bank
+nehnuteľnosť číslo listu vlastníctva:PlotOwnershipDocNo
+nehnuteľnosť druh:PlotType
+nehnuteľnosť veľkosť:PlotSize
+nehnuteľnosť číslo parcely:PlotParcelNumber
+nehnuteľnosť typ parcely:PlotParcelType
+nehnuteľnosť kataster okres:PlotDistrict
+nehnuteľnosť kataster kraj:PlotMunicipality
+nehnuteľnosť katastrálne územie:PlotCadasterZone
+nehnuteľnosť kataster:PlotCadaster
+byt číslo:AppartmentNumber
+byt spoluvlastnícky podiel:AppartmentAccessoryCoOwnership
+byt popisné číslo:AppartmentOrientationNumber
+byt súpisné číslo:AppartmentRegisterNumber
+byt izba druh:AppartmentRoomType
+byt poschodie bytového domu:AppartmentResidentialBuildingFloor
+byt správa bytového domu:BuildingAdministration
+byt izby počet:AppartmentRoomsNumber
+byt výmera príslušenstvo:AppartmentAccessoryArea
+byt výmera podlahová:AppartmentFloorArea
+byt výmera celková:AppartmentArea
+byt poschodie:AppartmentFloor
+automobil príslušenstvo:CarAccessories
+automobil počet najazdených km:CarKm
+automobil rok výroby:CarManufactureYear
+automobil číslo motora:EngineNumber
+automobil špz:CarPlate
+automobil vin číslo:Vin
+automobil farba:CarColour
+automobil značka:CarFactory
+automobil typ:CarType
+stavba druh:BuildingType
+stavba súpisné číslo:BuildingRegistryNumber
+pracovná pozícia:EmployeePosition
+miesto výkonu práce:EmployeeLocation
+pracovná náplň:WorkActivity
+pracovný pomer začiatok:EmploymentStartDate
+pracovný pomer koniec:EmploymentTerminationDate
+dátum zmeny pracovnej zmluvy:EmploymentContractChangeDate
+zmena bodu v pracovnej zmluve:EmploymentContractChangePart
+zmena bodu v pracovnej zmluve slovom:EmploymentContractChangePartByWord
+zmena pracovnej zmluvy:EmploymentContractChange
+zmena pracovnej zmluvy slovom:EmploymentContractChangeByWord
+pracovný pomer trvanie:EmploymentDuration
+spôsob ukončenia pracovného pomeru:EmploymentTerminationType
+osobný dotazník:EmploymentQuestionnaire
+životopis:EmploymentCV
+dodatočné dokumenty:EmploymentAdditionalDocuments
+dátum podpisu pracovnej zmluvy:EmploymentContractSignatureDate
+týždenný pracovný čas:WeeklyWorkingHours
+denný pracovný čas:DailyWorkingHours
+skúšobná doba:ProbationaryPeriod
+základná zložka mzdy:GrossWage
+pohyblivá zložka mzdy:MotivationWage
+čistá mzda:NetWage
+minimálna mzda:MinimumWage
+dátum výplaty:SalaryDate
+dohoda o ukončení pracovného pomeru:QuittingAgreement
+výpovedná doba začiatok:CancellationPeriodStartDate
+výpovedná doba koniec:CancellationPeriodTerminationDate
+dátum doručenia:DeliveryDate
+výpovedná lehota:NoticePeriode
+začiatok prac.doby starý:WorkingTimeStartHourOld
+začiatok prac.doby nový:WorkingTimeStartHourNew
+dátum začiatku materskej dovolenky:MaternityLeaveStartDate
+dátum ukončenia materskej dovolenky:MaternityLeaveEndDate
+nárok na kalendárny rok:AnnualHolidayYear
+začiatok čerpania dovolenky:HolidayStartDate
+koniec čerpania dovolenky:HolidayEndDate
+miesto čerpania dovolenky:HolidayLocation
+počet pracovný dní počas dovolenky:HolidayWorkDaysDuration
+dátum odvracania nehody:HelpByAccidentDate
+popis nehody:AccidentDescription
+predmet škody:DamagedObject
+hodnota predmetu škody:DamagedObjectValue
+celková výška škody:DamagedObjectValueTotal
+doklad o nákupe:PurchaseProof
+dátum krádeže na pracovisku:WorkplaceRobberyDate
+ukradnutý predmet:StolenObject
+hodnota ukradnutého predmetu:StolenObjectValue
+celková výška krádeže:StolenObjectValueTotal
+dôvody žiadosti o inventúru:InventoryRequestReason
+koeficient násobku:MultiplyingFactor
+priemerná mzda:SalaryAverage
+mesiac výplaty:SalaryMonth
+rok výplaty:SalaryYear
+peňažné plnenie vyplatené omylom:SalaryMistakeAmount
+dôvody žiadosti:RequestReason
+dátum začiatku pracovnej cesty:BusinessJourneyStartDate
+dátum skončenia pracovnej cesty:BusinessJourneyEndDate
+miesto pracovnej cesty:BusinessJourneyLocation
+dátum začatia podnikania zamestnanca:OwnBusinessStartDate
+predmet činnosti podnikania zamestnanca:OwnBusinessActivity
+základné imanie:CapitalEur
+základné imanie slovom:CapitalByWord
+peňažný vklad:PaidInCapital
+nepeňažný vklad:NonCashAssets
+vklad spoločníka:CapitalContributions
+vklad spoločníka slovom:CapitalContributionsByWord
+meno vkladateľa:ContributorName
+druh vkladu:ContributionType
+spôsob vloženia splatenia vkladu:ContributionPaymentMethod
+identifikácia vkladu:ContributionSpecification
+obchodné vedenie:BusinessManagement
+obchodné vedenie meno:BusinessManager
+obchodné vedenie predmet:BusinessManagementSubject
+zisk:Profit
+vyrovnací podiel:SettlementShare
+vyrovnací podiel splatnosť:SettlementShareMaturity
+správca vkladu:CapitalAdministrator
+zisk slovom:ProfitByWord
+strata:Loss
+strata slovne:LossByWord
+dátum zápisu:RegistrationDate
+predmet podnikania kód:BusinessTypeCode
+travanie:Duration
+národnosť:Nationality
+porušenie pracovnej disciplíny:Misconduct
+dátum porušenia pracovnej disciplíny:MisconductDate
+výška podieľu v spoločnosti:Share
+iný dôvod žiadosti na inventúru:OtherInventoryRequestReason
+zverený predmet popis:EntrustedSubjectDescription
+dátum zverenia predmetu:SubjectEntrustingDate
+Deadline dátum:DeadlineDate
+cena slovom:PriceByWord
+adresa:Address

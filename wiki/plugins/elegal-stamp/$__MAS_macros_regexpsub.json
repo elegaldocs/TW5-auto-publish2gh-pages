@@ -1,0 +1,11 @@
+[
+    {
+        "text": "/*\\\ntitle: $:/MAS/macros/regexpsub.js\ntype: application/javascript\nmodule-type: macro\n\nMake regular expression substitutions\n\n\\*/\n(function(){\n\n/*jslint node: true, browser: true */\n/*global $tw: false */\n\"use strict\";\n\nexports.name = \"regexpsub\";\n\nexports.params = [\n\t{name: \"regtext\"},\n\t{name: \"subtext\"},\n\t{name: \"text\"}\n\n];\n\n/*\nRun the macro\n*/\nexports.run = function(regtext, subtext,text) {\n       var regexp = new RegExp(regtext, \"gi\") ;\n       return text.replace(regexp,subtext) ;\n\t\n};\n\n})();\n",
+        "type": "application/javascript",
+        "title": "$:/MAS/macros/regexpsub",
+        "tags": "",
+        "module-type": "macro",
+        "modified": "20190214162920043",
+        "created": "20190214160253135"
+    }
+]

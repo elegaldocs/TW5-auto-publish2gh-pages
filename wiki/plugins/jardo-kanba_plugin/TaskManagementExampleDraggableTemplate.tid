@@ -1,0 +1,27 @@
+created: 20180307153530187
+modified: 20200309195657539
+tags: kanban-manager $:/tags/Macro
+title: TaskManagementExampleDraggableTemplate
+tmap.id: a4d03387-9f9c-4d17-981f-b64f2871a651
+type: text/vnd.tiddlywiki
+
+\define modal-transclude()
+{{$(name)$||render-template}}
+\end
+\define modal-card(card-width, color)
+<$set name="name"  value=<<currentTiddler>> >
+<$draggable tiddler=<<currentTiddler>>>
+<div style="width: $card-width$%;  background-color: $color$; box-shadow: 5px 10px; padding: 10px;  margin-top: 10px; margin-bottom: 10px;  display:inline-block;border:1px solid black; border-spacing: 15px">
+<$button class='tc-btn-invisible tc-tiddlylink'>
+<$action-sendmessage $param="render-template-modal" $message="tm-modal" yourMessage=<<modal-transclude>>/>
+{{!!title}}
+</$button>
+</div>
+</$draggable>
+</$set>
+\end
+\define modal-run(width:100)
+<$macrocall $name="modal-card" color={{!!color}} card-width=$width$ />
+\end
+
+<<modal-run>>

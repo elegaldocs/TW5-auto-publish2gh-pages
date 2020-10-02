@@ -1,0 +1,14 @@
+created: 20181101141032553
+creator: Mohammad
+modified: 20181101142532050
+modifier: Mohammad
+title: $:/plugins/ajh/favorites/readme
+
+This plugin adds the {{$:/plugins/ajh/favorites/image}} button to the View Toolbar and also the `Favorites` tab to the Sidebar. The button becomes `red` when selected and then the tiddler appears in the list on the `Favorites` tab.  The list can be sorted using drag and drop. A tiddler can be removed from the `Favorites` tab by opening it and clicking again on the {{$:/plugins/ajh/favorites/image}} button.
+
+Simply drag $:/plugins/ajh/favorites to the top of your tiddlywiki display, save and reload.
+
+;First release
+: Andrew Harrison at http://favorites.tiddlyspot.com/
+;Second release
+: Mohammad Rahmani

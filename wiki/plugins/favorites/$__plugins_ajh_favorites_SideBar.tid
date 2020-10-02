@@ -1,0 +1,26 @@
+caption: Favorites
+created: 20181008195317473
+creator: Mohammad
+list-before: $:/core/ui/SideBar/Recent
+modified: 20181008200310727
+modifier: Mohammad
+tags: $:/tags/SideBar
+title: $:/plugins/ajh/favorites/SideBar
+
+\define drop-actions()
+<$action-listops $tiddler='$:/plugins/ajh/favorites/list' $subfilter='+[insertbefore:currentTiddler<actionTiddler>]'/>
+\end
+
+<$list filter='[list[$:/plugins/ajh/favorites/list]]'>
+<div style='position: relative;'>
+<$droppable actions=<<drop-actions>>>
+<div class='tc-droppable-placeholder'>
+&nbsp;
+</div>
+<div>
+ <$link to={{!!title}}>
+<$view field='caption'><$view field='title'/></$view></$link>
+</div>
+</$droppable>
+</div>
+</$list>

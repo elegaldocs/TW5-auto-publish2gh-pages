@@ -1,0 +1,17 @@
+[
+    {
+        "created": "20200329131740515",
+        "text": "\\define url() https://elegaldocs.sk/Admin/EditFormInputs?formId={{!!formId}}#pageholder{{!!pageId}}\n\\define eframe()\n<$wikify name=\"url1\" text=<<url>>>\n<iframe src=<<url1>> height=600; width= 100%; border= 2px solid #ccc; scrolling=\"yes\" ></iframe>\n\\end\n<<eframe>>\n",
+        "title": "eframe",
+        "tags": "pageSearch",
+        "modified": "20200329160021898",
+        "name": "pageKatastrálnyúrad"
+    },
+    {
+        "created": "20200329132429475",
+        "text": "\\define toolbar-button-stamp-inner()\n<$button>\n<$list filter=\"[tag[pageInput]\">\n<$action-setfield $tiddler='eframe' $field=\"name\" $value=<<snippetTitle>>/>\n</$list>\n<$action-deletetiddler\n\t$tiddler=<<dropdown-state>>\n/>\n\n<$view tiddler=<<snippetTitle>> field=\"caption\" mode=\"inline\">\n\n<$view tiddler=<<snippetTitle>> field=\"title\" mode=\"inline\"/>\n\n</$view>\n\n</$button>\n\\end\nVyhľadávanie stránok:\n\n<$edit-text tiddler='eframe'  field='name'/>\n\n\n\n<$list filter=\"[tag[pageInputs]search{eframe!!name}]\" variable='snippetTitle' >\n<<toolbar-button-stamp-inner>>\n</$list>\n\n\n\n<$tiddler tiddler={{eframe!!name}}>\n<$transclude tiddler=\"eframe\"/>\n</$tiddler>",
+        "title": "VyhladavanieStranokFormularov",
+        "tags": "pageSearch",
+        "modified": "20200329155944947"
+    }
+]

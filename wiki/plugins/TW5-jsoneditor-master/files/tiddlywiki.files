@@ -1,0 +1,43 @@
+{
+  "tiddlers": [
+    {
+      "file": "jsoneditor.1.4.0.js",
+      "prefix": "if($tw.browser){\n",
+      "suffix": "\n}",
+      "fields": {
+        "type": "application/javascript",
+        "title": "$:/plugins/joshuafontany/jsoneditor/jsoneditor.js",
+        "module-type": "library"
+      }
+    },
+    {
+      "file": "jsoneditor.css",
+      "fields": {
+        "type": "text/css",
+        "title": "$:/plugins/joshuafontany/jsoneditor/jsoneditor.css",
+        "tags": "$:/tags/Stylesheet"
+      }
+    },
+    {
+      "file": "defaultOptions.json",
+      "fields": {
+        "type": "application/json",
+        "title": "$:/plugins/joshuafontany/jsoneditor/defaultOptions"
+      }
+    },
+    {
+      "file": "devMetaSchema4.json",
+      "fields": {
+        "type": "application/json",
+        "title": "$:/plugins/joshuafontany/jsoneditor/devMetaSchema4"
+      }
+    },
+    {
+      "file": "LICENSE",
+      "fields": {
+        "type": "text/plain",
+        "title": "$:/plugins/joshuafontany/jsoneditor/license"
+      }
+    }
+  ]
+}

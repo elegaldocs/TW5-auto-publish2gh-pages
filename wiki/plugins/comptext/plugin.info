@@ -1,0 +1,18 @@
+{
+  "author": "Reid Gould <reidgould@gmail.com>",
+  "author-name": "Reid Gould",
+  "author-email": "reidgould@gmail.com",
+  "author-web": "https://www.reidgould.com",
+  "source": "https://github.com/reidgould/tiddlywiki-dropboard",
+  "userguide": "http://reidgould.github.io/tiddlywiki-dropboard",
+  "dependents": "",
+  "description": "conditions",
+  "name": "$:/plugins/snowgoon88/edit-comptext",
+  "plugin-type": "plugin",
+  "tags": "",
+  "title": "$:/plugins/snowgoon88/edit-comptext",
+  "type": "application/json",
+  "version": "1.0.2",
+  "core-version": ">=5.0.0",
+  "list": "readme license"
+}

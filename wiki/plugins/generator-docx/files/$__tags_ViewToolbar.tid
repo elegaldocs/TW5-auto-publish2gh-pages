@@ -1,0 +1,10 @@
+created: 20180527150417139
+creator: 60fa9f73-1464-4ced-ad9d-bf6feceeb815-bluemix
+list: $:/core/ui/Buttons/PdfSaveButton $:/core/ui/Buttons/PrintButton $:/core/ui/Buttons/DocSaveButton $:/core/ui/Buttons/more-tiddler-actions $:/core/ui/Buttons/info $:/core/ui/Buttons/new-here $:/core/ui/Buttons/new-journal-here $:/core/ui/Buttons/clone $:/core/ui/Buttons/export-tiddler $:/core/ui/Buttons/edit $:/core/ui/Buttons/delete $:/core/ui/Buttons/permalink $:/core/ui/Buttons/permaview $:/core/ui/Buttons/open-window $:/core/ui/Buttons/close-others $:/core/ui/Buttons/close $:/core/ui/Buttons/fold-others $:/core/ui/Buttons/fold
+modified: 20191114213740574
+modifier: 60fa9f73-1464-4ced-ad9d-bf6feceeb815-bluemix
+revision: 1-74e1c9ab5c8816d8178751bede5e81c5
+tags: DocSaveButtons
+title: $:/tags/ViewToolbar
+type: text/vnd.tiddlywiki
+

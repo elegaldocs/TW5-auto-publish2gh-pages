@@ -1,0 +1,10 @@
+caption: {{$:/language/Buttons/elegal-input/Caption}}
+condition: [<targetTiddler>type[]] [<targetTiddler>get[type]prefix[text/]] +[first[]]
+created: 20200321152226384
+description: {{$:/language/Buttons/elegal-input/Hint}}
+dropdown: $:/core/ui/EditorToolbar/elegal-input-dropdown
+icon: $:/core/images/elegal-input
+modified: 20200321154431427
+shortcuts: ((elegal-input))
+tags: input $:/tags/EditorToolbar
+title: $:/core/ui/EditorToolbar/elegal-input

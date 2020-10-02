@@ -1,0 +1,10 @@
+created: 20200320193155494
+modified: 20200322193058457
+tags: 
+title: css-docx
+tmap.id: b5e1f038-ce99-4f47-835a-d722d602c2c9
+type: text/vnd.tiddlywiki
+
+<style>
+code, p div {font-size: 16px; font-family: Arial;} 
+</style>

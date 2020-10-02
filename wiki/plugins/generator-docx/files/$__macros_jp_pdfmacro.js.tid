@@ -1,0 +1,51 @@
+created: 20180529105443001
+creator: Stephan Hradek
+modified: 20191114213740574
+modifier: 60fa9f73-1464-4ced-ad9d-bf6feceeb815-bluemix
+module-type: macro
+revision: 11-93771f484129404d3e29d05901ce644c
+tags: DocSaveButtons
+title: $:/macros/jp/pdfmacro.js
+type: application/javascript
+
+/*\
+title: $:/macros/skeeve/mysamplemacro.js
+type: application/javascript
+module-type: macro
+
+<<pdfmacro obsah nazov>>
+
+Example:
+<<pdfmacro "obsah" "nazov">>
+
+\*/
+(function(){
+
+/*jslint node: true, browser: true */
+/*global $tw: false */
+"use strict";
+
+/*
+Information about this macro
+This is the macro of Tiddly Wiki 5 written in JavaScript for pdf export 
+*/
+
+exports.name = "pdfmacro";
+
+exports.params = [
+	{ name: "obsah" },
+	{ name: "nazov" }
+];
+
+/*
+Run the macro
+*/
+exports.run = function(obsah, nazov) {
+        var pdfDoc = require("$:/macros/jp/pdfLibrary.js");
+	e();function e(){
+     var doc = new pdfDoc.jsPDF();
+       doc.fromHTML(obsah, 15, 15);
+        doc.save(nazov + '.pdf');}
+};
+
+})();

@@ -1,0 +1,57 @@
+created: 20140110061443770
+creator: Stephan Hradek
+modified: 20191114213740574
+modifier: 60fa9f73-1464-4ced-ad9d-bf6feceeb815-bluemix
+module-type: macro
+revision: 0
+tags: DocSaveButtons
+title: $:/macros/jp/tidmacro.js
+type: application/javascript
+
+
+/*\
+title: $:/macros/skeeve/mysamplemacro.js
+type: application/javascript
+module-type: macro
+
+
+
+Example:
+<<tidmacro "obsah" "nazov" "format">>
+
+\*/
+(function(){
+
+/*jslint node: true, browser: true */
+/*global $tw: false */
+"use strict";
+
+/*
+Information about this macro
+This is the macro of Tiddly Wiki 5 written in JavaScript for docx export 
+*/
+
+exports.name = "tidmacro";
+
+exports.params = [
+	{ name: "obsah" },
+	{ name: "nazov" },
+	{ name: "format" }
+
+];
+
+/*
+Run the macro
+*/
+exports.run = function(obsah, nazov, format) {
+        var docSavex = require("$:/macros/jp/docsave.js");
+       
+       
+	 fe(); function fe(){
+        
+        var converted = new Blob([obsah], {type: "text/plain"});
+        docSavex(converted, nazov+'.'+format);}
+       
+};
+
+})();

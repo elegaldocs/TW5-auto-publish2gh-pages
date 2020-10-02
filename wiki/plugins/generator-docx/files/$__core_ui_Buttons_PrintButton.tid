@@ -1,0 +1,26 @@
+caption: vytlacit
+created: 20180526082123121
+creator: 60fa9f73-1464-4ced-ad9d-bf6feceeb815-bluemix
+modified: 20191114213740574
+modifier: 60fa9f73-1464-4ced-ad9d-bf6feceeb815-bluemix
+revision: 1-9eb388a47cbd83dccc7de44d11ce431a
+tags: DocSaveButtons ss $:/tags/ViewToolbar
+title: $:/core/ui/Buttons/PrintButton
+type: text/vnd.tiddlywiki
+
+\define newHereButtonTags()
+[[$(currentTiddler)$]]
+\end
+\define newHereButton()
+<$button tooltip="Print " class=<<tv-config-toolbar-class>>>
+<$action-sendmessage
+  $message="tm-open-window"
+  tags=<<newHereButtonTags>> />
+<$list filter="[<tv-config-toolbar-icons>prefix[yes]]">
+{{$:/core/images/export-button}}
+</$list>
+<$list filter="[<tv-config-toolbar-text>prefix[yes]]">
+<span class="tc-btn-text"><$text text="CAPTION FOR YOUR BUTTON"/></span>
+</$list></$button>
+\end
+<<newHereButton>>

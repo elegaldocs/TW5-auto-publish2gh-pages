@@ -1,0 +1,181 @@
+created: 20200321092336749
+modified: 20200321154439099
+tags: input
+title: $:/core/ui/EditorToolbar/elegal-input-dropdown
+
+\define xx() $(prefix)$$(kolekcia)$$(wikifyContent)$$(content)$$(surfix)$
+\define yy() $(prefix)$/$(kolekcia)$$(wikifyContent)$$(surfix)$
+\define zz() $(wikifyContent)$$(content)$
+\define tran() $(prefix)$$(snippetTitle)$$(wikifyContent)$$(surfix)$
+
+
+\define toolbar-button-stamp-inner()
+
+<$button class="tc-btn-invisible">
+
+<$list filter="[tag{$:/state/StampTiddler!!kategoria}][{$:/state/StampTiddler!!InputTiddlerName}getindex[$(snippetTitle)$]]">
+<$vars content={{$(snippetTitle)$}} kolekcia={{$:/state/StampTiddler!!kolekcia}} prefix={{$:/state/StampTiddler!!prefix}} surfix={{$:/state/StampTiddler!!surfix}}>
+<$wikify name="wikifyContent" text={{{ [{$:/state/StampTiddler!!InputTiddlerName}getindex[$(snippetTitle)$]] }}}>
+
+
+<$tiddler tiddler="$:/state/StampTiddler">
+
+
+<$reveal type="match" state="!!druh" text="form">
+
+<$action-sendmessage $message="tm-modal" $param='$:/elegal-input/render-template-modal' content={{$(snippetTitle)$}}/>
+
+</$reveal>
+
+<$reveal type="match" state="!!druh" text="none">
+
+
+<$action-sendmessage
+	$message="tm-edit-text-operation"
+	$param="wrap-selection"
+	prefix=<<zz>>
+	suffix=""
+/>
+</$reveal>
+
+
+<$reveal type="match" state="!!druh" text="input">
+
+<$action-sendmessage
+	$message="tm-edit-text-operation"
+	$param="wrap-selection"
+	prefix=<<xx>>
+	suffix=""
+/>
+</$reveal>
+<$reveal type="match" state="!!druh" text="xml">
+
+<$action-sendmessage
+	$message="tm-edit-text-operation"
+	$param="wrap-selection"
+	prefix=<<xx>>
+	suffix=<<yy>>
+/>
+
+</$reveal>
+<$reveal type="match" state="!!druh" text="podmienka">
+
+<$action-sendmessage
+	$message="tm-edit-text-operation"
+	$param="wrap-selection"
+	prefix=<<xx>>
+	suffix=<<yy>>
+/>
+</$reveal>
+
+<$reveal type="match" state="!!druh" text="kolekcia">
+
+<$action-sendmessage
+	$message="tm-edit-text-operation"
+	$param="wrap-selection"
+	prefix=<<xx>>
+	suffix=<<yy>>
+/>
+</$reveal>
+
+<$reveal type="match" state="!!druh" text="trankluzia">
+
+<$action-sendmessage
+	$message="tm-edit-text-operation"
+	$param="wrap-selection"
+	prefix=<<tran>>
+	suffix=""
+/>
+</$reveal>
+
+</$tiddler>
+
+
+</$wikify>
+</$vars>
+</$list>
+
+
+
+<$action-deletetiddler
+	$tiddler=<<dropdown-state>>
+/>
+
+<$view tiddler=<<snippetTitle>> field="caption" mode="inline">
+
+<$view tiddler=<<snippetTitle>> field="title" mode="inline"/>
+
+</$view>
+
+</$button>
+\end
+
+<$edit-text tiddler="$:/state/StampTiddler" default="page" field="name" focus='yes' />
+
+<$list filter="[tag{$:/state/StampTiddler!!kategoria}search{$:/state/StampTiddler!!name}][{$:/state/StampTiddler!!InputTiddlerName}indexes[]search{$:/state/StampTiddler!!name}]"  variable="snippetTitle">
+<<toolbar-button-stamp-inner>>
+</$list>
+
+kolekcia <$select tiddler="$:/state/StampTiddler" field='kolekcia'>
+<$list filter='Creditor Debtor Bank Address Court Primus Secundus Tertius Quertus Quintus Sextus Septimus Octavus Nonus Building Car Appartment Plot Work ' variable='person'>
+<option><<person>></option>
+</$list>
+</$select>
+<$edit-text tiddler="$:/state/StampTiddler" field="kolekcia"/> 
+<$tiddler tiddler="$:/state/StampTiddler">
+<$select field='druh' actions="""
+
+<$reveal type="match" state="!!druh" text="kolekcia">
+<$action-setfield $field='prefix' $value='`{{`'/>
+<$action-setfield $field='surfix' $value='`}}`'/>
+</$reveal>
+
+<$reveal type="match" state="!!druh" text="input">
+<$action-setfield $field='prefix' $value='`[[`'/>
+<$action-setfield $field='surfix' $value='`]]`'/>
+</$reveal>
+
+<$reveal type="match" state="!!druh" text="podmienka">
+<$action-setfield $field='prefix' $value='`<<`'/>
+<$action-setfield $field='surfix' $value='`>>`'/>
+</$reveal>
+
+<$reveal type="match" state="!!druh" text="xml">
+<$action-setfield $field='prefix' $value='`<`'/>
+<$action-setfield $field='surfix' $value='`>`'/>
+</$reveal>
+
+<$reveal type="match" state="!!druh" text="trankluzia">
+<$action-setfield $field='prefix' $value='{{'/>
+<$action-setfield $field='surfix' $value='}}'/>
+</$reveal>
+
+
+""">>
+<option>none</option>
+<option>kolekcia</option>
+<option>input</option>
+<option>podmienka</option>
+<option>trankluzia</option>
+<option>xml</option>
+<option>form</option>
+</$select>
+</$tiddler>
+
+
+Tag of data autotext tiddlers <$select tiddler="$:/state/StampTiddler" field='kategoria'>
+<option></option>
+<option>pageInputs</option>
+</$select>
+
+
+Input tiddler name (autotextDictionary tag)<$select tiddler="$:/state/StampTiddler" field='InputTiddlerName'>
+<$list filter='[tag[autotextDictionary]]' variable='dictionary'>
+<option><<dictionary>></option>
+</$list>
+</$select>
+
+ <$button><$action-sendmessage
+	$message="tm-edit-tiddler" $param={{$:/state/StampTiddler!!tiddlerTitle}}
+/>
+{{$:/core/images/edit-button}}</$button>

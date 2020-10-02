@@ -1,0 +1,19 @@
+{
+  "author": "kixam",
+  "author-name": "kixam",
+  "author-email": "",
+  "author-web": "",
+  "source": "",
+  "userguide": "",
+  "dependents": "momentum",
+  "description": "datepicker plugin for TiddlyWiki5, based on Pikaday version 1.6.1",
+  "name": "$:/plugins/kixam/datepicker",
+  "plugin-type": "plugin",
+  "tags": "",
+  "title": "$:/plugins/kixam/datepicker",
+  "type": "application/json",
+  "version": "2.24.0",
+  "core-version": ">=5.1.8",
+  "list": "readme license"
+}
+

@@ -1,0 +1,10 @@
+created: 20140912145537860
+footer: <$button message="tm-close-tiddler">Close</$button>
+modified: 20200309195021114
+subtitle: 
+tags: kanban-manager
+title: render-template-modal
+tmap.id: 5dc3b88f-91e3-4447-9b89-b30b6aa2ab88
+type: text/vnd.tiddlywiki
+
+<<yourMessage>>

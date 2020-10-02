@@ -1,0 +1,118 @@
+created: 20200309202808948
+modified: 20200320115818551
+month: 3
+tags: kanban-manager
+title: calendar-board
+tmap.id: dd690838-d67b-446c-a564-d1d8e2fe3cd9
+year: 2020
+
+\define thisBlogArchiveMacro(day)
+<$set name=Day value=$day$>
+<$set name=Month value={{!!month}}>
+<$set name=Year value={{!!year}}>
+<$set name=DayTiddlerName value=<<thisCalendarMakeDateString>>>
+<$set name=TiddlerExistanceCheck filter='[title<DayTiddlerName>!has[text]]'>
+<$reveal type='nomatch' state=<<TiddlerExistanceCheck>> text=''>
+<$button   param=<<thisCalendarMakeDateString>> to=<<thisCalendarMakeDateString>> class='tc-btn-invisible' style='width:100%;height:100%;overflow:hidden;'>
+<div style='height:100%;width:1000%;position:relative;text-align:left;vertical-align:top;z-index=0;overflow:hidden;'>
+''$day$''<br>
+<$droppable actions=<<draggableMacro>>>
+<$list filter='[due_date<kalendar>]'>
+<$set name="name"  value=<<currentTiddler>> >
+<$draggable tiddler=<<currentTiddler>>>
+<div style="width: 100%;  background-color: $link$; box-shadow: 5px 10px; padding: 10px;  margin-top: 10px; margin-bottom: 10px;  display:inline-block;border:1px solid black; border-spacing: 15px">
+<$button class='tc-btn-invisible tc-tiddlylink'>
+<$action-sendmessage $param="SampleModal" $message="tm-modal" yourMessage=<<imgmod>>/>
+{{!!title}}
+</$button>
+</div>
+</$draggable>
+
+</$set>
+
+</$list>
+</$droppable>
+</div>
+</$button>
+</$reveal>
+
+<$reveal type='match' state=<<TiddlerExistanceCheck>> text=''>
+<$droppable actions=<<draggableMacro>>>
+<$button   class='tc-btn-invisible' style='width:100%;height:100%;overflow:hidden;'>
+<$action-setfield $tiddler='$:/temp/CalendarDay' subtitle=<<thisCalendarMakeDateString>> text=<<thisBuildDayTiddlerText>>/>
+<div style='height:100%;width:1000%;position:relative;text-align:left;vertical-align:top;z-index=0;overflow:hidden;'>
+''$day$''<br>
+
+<$list filter='[due_date<kalendar>]'>
+<<modal-run width:'10'>>
+</$list>
+
+</div>
+<$action-sendmessage $message="tm-modal" $param='$:/temp/CalendarDay'/>
+
+</$button>
+</$droppable>
+</$reveal>
+</$set>
+</$set>
+</$set>
+</$set>
+</$set>
+\end
+
+
+\define thisCalendarMakeDateString()
+$(Year)$-$(Month)$-$(Day)$
+\end
+
+\define kalendar()
+$(Year)$-$(Month)$-$(Day)$
+\end
+
+
+\define draggableMacro()
+<$action-setfield $tiddler=<<actionTiddler>> due_date=$(Year)$-$(Month)$-$(Day)$/>
+\end
+
+\define thisBuildDayTiddlerText()
+Zadajte názov úlohy:
+
+<$edit-text tiddler="$:/temp/taskFields" field="name"/>
+Pridajte ulohu
+<$button >{{$:/core/images/new-button}}
+<$action-createtiddler $basetitle={{$:/temp/taskFields!!name}} tags='task' text='text' day=$(Day)$ month=$(Month)$ year=$(Year)$/>
+<$action-sendmessage $message="tm-modal" $param={{$:/temp/taskFields!!name}}/>
+</$button>
+<br>
+
+! Outstanding tasks
+
+//Drag the tasks to re-order them//
+
+<<list-tagged-draggable tag:"Task" subFilter:"!tag[Done]!has[draft.of]day[$(Day)$]month[$(Month)$]year[$(Year)$]" itemTemplate:"TaskManagementExampleDraggableTemplate" emptyMessage:"You don't have any active tasks">>
+
+! Completed tasks
+
+//(Listed in reverse order of completion)//
+
+<$list filter="[!has[draft.of]tag[Task]tag[Done]day[$(Day)$]month[$(Month)$]year[$(Year)$]sort[created]]">
+<div>
+<$checkbox tag="Done"> ~~<$link to={{!!title}}><$view field="title"/></$link>~~</$checkbox>
+<$button>
+<$action-deletetiddler $tiddler=<<currentTiddler>>/>
+{{$:/core/images/delete-button}}
+</$button>
+
+</div>
+</$list>
+\end
+
+<<kalendar>>
+
+Toto je skúšobný kalendár pre jp kanban board. Presunom kartičky na iný dátum dochádza k zmene pola due date. Kliknutím na kartu je možné zmeniť nastavenia úlohy.
+
+Select year: <$select field='year'><$list filter='2020 2021 2022 2023'><option><<currentTiddler>></option></$list></$select>
+
+Select month: <$select field='month'><$list filter='1 2 3 4 5 6 7 8 9 10 11 12'><option><<currentTiddler>></option></$list></$select>
+
+<$calendar-month  year={{!!year}} month={{!!month}} day_macro='thisBlogArchiveMacro'/>

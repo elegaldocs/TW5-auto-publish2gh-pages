@@ -1,0 +1,18 @@
+title: $:/plugins/joshuafontany/jsoneditor/readme
+
+! Json Editor for TiddlyWiki5, Version {{$:/plugins/joshuafontany/jsoneditor!!version}}
+
+Automatically generate html forms in Tiddlywiki from JSON Schema files using:
+
+[[Json-Editor for Javascript|https://github.com/json-editor/json-editor]]
+
+[[Plugin source code|https://github.com/joshuafontany/TW5-jsoneditor]]
+
+{{$:/plugins/joshuafontany/jsoneditor/usage}}
+
+!!!! Json-Editor Read Me
+
+The original Read Me for json-editor can be found here for convenience:
+
+https://github.com/json-editor/json-editor
+

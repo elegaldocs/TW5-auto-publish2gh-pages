@@ -1,0 +1,72 @@
+created: 20200308111041256
+modified: 20200309210311111
+tags: kanban-manager
+title: render-template
+tmap.id: f45bbed8-b348-4cfb-a349-d32b09058498
+
+!! ''Zadajte názov úlohy'' 
+
+---
+<$edit-text class='tc-edit-texteditor' field='title' /><br>
+
+---
+
+!! ''Krátky popis úlohy'' (optional)
+
+<$edit-text class='tc-edit-texteditor'  field='description' placeholder='Popis úlohy'/><br>
+
+---
+!!''Dátum ukončenia úlohy - due date'' (optional)
+
+
+Tu môžete uviesť, kedy bol dokument vydaný. To môže byť užitočné pri vyhľadávaní.
+
+<$edit-date field='due_date' format='YYYY-MM-DD' fieldFormat='YYYY-M-D'/>
+
+---
+
+!!''Farba'' 
+
+<$edit-text type="color" field='color'/>
+
+---
+
+!!''Pridajte tag alebo tagy k dokumentu'' (optional)
+  
+<$select  field='add_or_create_tag'>
+<option value='existing'>Pridať existujúci tag</option>
+<option value='create'>Pridať nový tag</option>
+</$select>
+<$reveal type=match state='$:/state/NewTiddlerForm!!add_or_create_tag' text='create'>
+New Tag Name: <$edit-text  field='tag_temp' placeholder='Nový Tag'/><$fieldmangler >
+<$button>
+<$action-sendmessage $message='tm-add-tag' $param={{$:/state/NewTiddlerForm!!tag_temp}}/>
+Pridať Tag
+</$button>
+</$fieldmangler><br>
+</$reveal>
+<$reveal type='match' state='$:/state/NewTiddlerForm!!add_or_create_tag' text='existing'>
+Tag to add: <$select  field='tag_temp'>
+<$list filter='[tags[]sort[title]]'>
+<option><$view field='title'/></option>
+</$list>
+</$select>
+<$fieldmangler tiddler={{$:/state/NewTiddlerForm!!name_temp}}>
+<$button>
+<$action-sendmessage $message='tm-add-tag' $param={{$:/state/NewTiddlerForm!!tag_temp}}/>Pridať Tag
+</$button>
+</$fieldmangler>
+<br>
+</$reveal>
+Zoznam existujúcich tagov:<br>
+<$fieldmangler tiddler={{$:/state/NewTiddlerForm!!name_temp}}>
+<$set name=tiddlerEditing value='$:/state/NewTiddlerForm'>
+<$list filter='[{$:/state/NewTiddlerForm!!name_temp}tags[]]'><$view field='title'/> <$button>Zmazať Tag<$action-sendmessage $message='tm-remove-tag' $param=<<currentTiddler>>/></$button><br> </$list>
+</$set>
+</$fieldmangler>
+
+---
+
+!! ''Obsah''
+
+{{!!text}}
